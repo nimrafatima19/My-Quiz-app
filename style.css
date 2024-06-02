@@ -1,0 +1,55 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 80px;
+    background-color: #0d6db7;
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+
+.logo{
+
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo>img{
+
+    width: 100%;
+}
+
+.icon>a{
+
+    text-decoration: none;
+    color:white;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:500px){
+    header{
+        padding: 5px 40px;
+    }
+}
+
