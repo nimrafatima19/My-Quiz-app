@@ -1,0 +1,30 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.subjects{
+
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: aqua;
+    padding: 30px 80px;
+    margin-top: 90px;
+}
+
+.sub{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+   
+    background-color: white;
+    color:#0d6db7;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px;
+
+}
