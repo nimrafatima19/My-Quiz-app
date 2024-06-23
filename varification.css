@@ -105,7 +105,7 @@ cursor: pointer;
 }
 .btn2>button:active{
     color:white;
-    background-color: #028ffa;
+    background-color: green;
 }
 
 
