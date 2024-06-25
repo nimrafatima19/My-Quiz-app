@@ -20,3 +20,10 @@ function login(){
 
 let loginBtn = document.getElementById("loginBtn")
 loginBtn.addEventListener("click",login)
+
+let createBtn = document.getElementById("createBtn")
+function create(){
+  window.location.assign("signUp.html")
+}
+
+createBtn.addEventListener("click",create)

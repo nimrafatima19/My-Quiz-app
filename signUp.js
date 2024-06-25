@@ -21,3 +21,11 @@ function register() {
 let signupBtn = document.getElementById("signupBtn")
 
 signupBtn.addEventListener("click",register)
+
+let loginAccount = document.getElementById("loginAccount")
+
+function accountLogin(){
+    window.location.assign("index.html")
+}
+
+loginAccount.addEventListener("click",accountLogin)
