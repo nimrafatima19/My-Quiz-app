@@ -38,6 +38,13 @@ let clickSend = document.getElementById("clickSend")
 
 clickSend.addEventListener("click",send)
 
+let btn3 = document.getElementById("btn3")
+
+function cont(){
+    window.location.assign("card.html")
+}
+btn3.addEventListener("click",cont)
+
 
 
 
