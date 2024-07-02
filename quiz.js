@@ -69,9 +69,25 @@ function deselect() {
 
 function next() {
 
+    let checkans = false
 
+    // scoring
+    for (let i = 0; i < answer.length; i++) {
+        if (answer[i].checked) {
+            checkans = true
 
-    if (questionCount < htmlQuiz.length - 1) {
+            if (answer[i].value == htmlQuiz[questionCount].ans) {
+                score++
+                console.log(score)
+            }
+
+        }
+    }
+if(checkans == false){
+    alert("Please select any option")
+}
+
+    else if (questionCount < htmlQuiz.length - 1) {
         questionCount++
         deselect()
         renderQuestion()
