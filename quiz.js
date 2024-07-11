@@ -43,6 +43,20 @@ let value_4 = document.getElementById("val_4")
 
 let answer = document.getElementsByName("answer")
 
+let quiz = document.getElementById("quiz")
+
+let timer = document.getElementById("timer")
+var timeleft = 300
+
+// show result
+
+let congrate = document.getElementById("congrate")
+let name = document.getElementById("name")
+let correct = document.getElementById("correct")
+let total = document.getElementById("total")
+let mains = document.getElementById("mains")
+let per = document.getElementById("per")
+
 
 function renderQuestion() {
     question.innerHTML = htmlQuiz[questionCount].que
@@ -57,7 +71,7 @@ function renderQuestion() {
     value_4.innerHTML = htmlQuiz[questionCount].opt4
 
 }
-renderQuestion()
+
 
 let nextBtn = document.getElementById("next")
 
@@ -83,17 +97,61 @@ function next() {
 
         }
     }
-if(checkans == false){
-    alert("Please select any option")
-}
+    if (checkans == false) {
+        alert("Please select any option")
+    }
 
     else if (questionCount < htmlQuiz.length - 1) {
         questionCount++
         deselect()
         renderQuestion()
     }
+    else {
+        showResult()
+    }
 
 }
 nextBtn.addEventListener("click", next)
+
+
+
+function showResult() {
+    quiz.style.display = "none"
+    mains.style.display = "flex"
+
+    let percentage = Math.floor(score / htmlQuiz.length * 100)
+
+    per.innerHTML = percentage + "%"
+
+    if (percentage >= 70) {
+        congrate.innerHTML = `Congratulations <br> 👏 <br> You have passed`
+    }
+    else {
+        congrate.innerHTML = `Sorry  <br> 🥺 <br> You have Failed`
+        congrate.style.color = "red"
+        per.style.color = "red"
+    }
+    correct.innerHTML = "Correct Answer: " + score
+    total.innerHTML = "Total Question: " + htmlQuiz.length
+}
+
+//timer
+
+function startTimer() {
+    let timeStart = setInterval(() => {
+        if (timeleft <= 0) {
+            showResult()
+        }
+        else {
+            timeleft--
+            let mintues = Math.floor(timeleft / 60)
+            let second = Math.floor(timeleft % 60)
+            timer.innerHTML = `${mintues}:${second}`
+        }
+    }, 5)
+}
+renderQuestion()
+startTimer()
+
 
 
