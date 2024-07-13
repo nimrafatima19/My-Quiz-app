@@ -16,6 +16,11 @@ header {
     z-index: 1;
 }
 
+.sign{
+    font-size: 2rem;
+    color: #ffffff;
+}
+
 .logo {
 
     width: 100px;
