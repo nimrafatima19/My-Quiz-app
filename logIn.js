@@ -23,7 +23,7 @@ loginBtn.addEventListener("click",login)
 
 let createBtn = document.getElementById("createBtn")
 function create(){
-  window.location.assign("signUp.html")
+  window.location.assign("signup1.html")
 }
 
 createBtn.addEventListener("click",create)
